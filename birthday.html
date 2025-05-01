@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, My Love</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to right, #ffe0ec, #ffe8f3);
+      padding: 40px;
+      max-width: 700px;
+      margin: auto;
+      color: #5c0039;
+      animation: fadeIn 2s ease;
+    }
+    h1, h2 {
+      text-align: center;
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5em;
+      color: #c2185b;
+      margin-bottom: 10px;
+    }
+    .question {
+      background: #fff0f5;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #880e4f;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      border: 1px solid #ffb6c1;
+    }
+    button {
+      padding: 12px 25px;
+      background-color: #ec407a;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #d81b60;
+    }
+    .hidden {
+      display: none;
+    }
+    #rewardSection a {
+      color: #ad1457;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    #rewardSection a:hover {
+      text-decoration: underline;
+    }
+    p.feedback {
+      color: red;
+      font-weight: bold;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .heart {
+      text-align: center;
+      font-size: 2em;
+      color: #e91e63;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="heart">🎊🎂🌷🎂🎊</div>
+  <h1>Happy Birthday, My Sweet Little Babyyy !😚❤️</h1>
+
+  <div id="questions">
+    <div class="question">
+      <label>Question 1: What was the name of our very first pet?</label>
+      <input type="text" id="q1">
+    </div>
+    <div class="question">
+      <label>Question 2: What is your birthdate ?</label>
+      <input type="text" id="q2">
+    </div>
+  <div id="questions">
+    <div class="question">
+      <label>Question 3: Who is your favorite singer 😂?</label>
+      <input type="text" id="q3">
+    </div>
+  <div id="questions">
+    <div class="question">
+      <label>Question 4: What do you want to gift your father ?</label>
+      <input type="text" id="q4">
+    </div>
+  <div id="questions">
+    <div class="question">
+      <label>Question 5: Whom you love the most ?</label>
+      <input type="text" id="q5">
+    </div>
+  <div id="questions">
+    <div class="question">
+      <label>Question 6: Which flower did I gave you first ?</label>
+      <input type="text" id="q6">
+    </div>
+  <div id="questions">
+    <div class="question">
+      <label>Question 7: Which song you used to hear a lot while you were young?</label>
+      <input type="text" id="q7">
+    </div>
+  <div id="questions">
+    <div class="question">
+      <label>Question 8: Which is your favorite flower?</label>
+      <input type="text" id="q8">
+    </div>
+  <div id="questions">
+    <div class="question">
+      <label>Question 9: What is our most expensive restaurant visit ?</label>
+      <input type="text" id="q9">
+    </div>
+  <div id="questions">
+    <div class="question">
+      <label>Question 10: What was our first movie we watched together?</label>
+      <input type="text" id="q10">
+    </div>
+  <div id="questions">
+    <div class="question">
+      <label>Question 11: Who is your home?</label>
+      <input type="text" id="q11">
+    </div>
+  <div id="questions">
+    <div class="question">
+      <label>Question 12:Who usually apologizes first after an argument ?</label>
+      <input type="text" id="q12">
+    </div>
+  <div id="questions">
+    <div class="question">
+      <label>Question 13: What we will do in shower other than bathing?</label>
+      <input type="text" id="q13">
+    </div>
+  <div id="questions">
+    <div class="question">
+      <label>Question 14: What is your favorite drink?</label>
+      <input type="text" id="q14">
+    </div>
+  <div id="questions">
+    <div class="question">
+      <label>Question 15: Who is my chotii siii babyyy?</label>
+      <input type="text" id="q15">
+    </div>
+    <button onclick="checkAnswers()">Submit Answers</button>
+    <p id="feedback" class="feedback"></p>
+  </div>
+
+  <div id="passwordSection" class="hidden">
+    <h2>You’re Amazing ❤️as expected of my darling ! 💕</h2>
+    <div class="question">
+      <label>Password Hint: Where I just stop all worries and thinking and just rest and sometimes might cry ?🫂</label>
+      <input type="password" id="password">
+      <button onclick="checkPassword()">Unlock Gift</button>
+    </div>
+    <p id="passwordFeedback" class="feedback"></p>
+  </div>
+
+  <div id="rewardSection" class="hidden">
+    <h2>🎁 For the Love of My Life 🎁</h2>
+    <p>Here’s your special surprise: <a href="https://drive.google.com/file/d/1Z8ld2rCIB7TEHFXl8nQ6Wr1T3g6piMHn/view?usp=sharing" target="_blank">Click Here, Beautiful 💌</a></p>
+    <p style="text-align: center; font-size: 1.2em; margin-top: 20px;">I Loveeeeeee youuuuuuuuu forever ❤️</p>
+  </div>
+
+  <script>
+    function checkAnswers() {
+      const q1 = document.getElementById('q1').value.trim().toLowerCase();
+      const q2 = document.getElementById('q2').value.trim();
+      const q3 = document.getElementById('q3').value.trim();
+      const q4 = document.getElementById('q4').value.trim();
+      const q5 = document.getElementById('q5').value.trim();
+      const q6 = document.getElementById('q6').value.trim();
+      const q7 = document.getElementById('q7').value.trim();
+      const q8 = document.getElementById('q8').value.trim();
+      const q9 = document.getElementById('q9').value.trim();
+      const q10 = document.getElementById('q10').value.trim();
+      const q11 = document.getElementById('q11').value.trim();
+      const q12 = document.getElementById('q12').value.trim();
+      const q13 = document.getElementById('q13').value.trim();
+      const q14 = document.getElementById('q14').value.trim();
+      const q15 = document.getElementById('q15').value.trim();
+
+
+      if (q1 === 'tomato' && 
+	   q2 === '2' &&
+	   q3 === 'shivang' &&
+	  q4 === 'car' &&
+	  q5 === 'family' &&
+	  q6 === 'rose' &&
+	  q7 === 'baan ma fulyo phool' &&
+	  q8 === 'tulip' &&
+	  q9 === 'el chico' &&
+	  q10 === 'suzume' &&
+	  q11 === 'shivang' &&
+	  q12 === 'shivang' &&
+	  q13 === 'sex' &&
+	  q14 === 'bubble tea' &&
+	  q15 === 'mohinee kharka gupta') {
+        document.getElementById('feedback').textContent = '';
+        document.getElementById('questions').classList.add('hidden');
+        document.getElementById('passwordSection').classList.remove('hidden');
+      } else {
+        document.getElementById('feedback').textContent = 'Oops! Try again, sweetheart.';
+      }
+    }
+
+    function checkPassword() {
+      const password = document.getElementById('password').value.trim().toLowerCase();
+
+      if (password === 'lap') {
+        document.getElementById('passwordFeedback').textContent = '';
+        document.getElementById('passwordSection').classList.add('hidden');
+        document.getElementById('rewardSection').classList.remove('hidden');
+      } else {
+        document.getElementById('passwordFeedback').textContent = 'Not quite right, my love. Try again 😚';
+      }
+    }
+  </script>
+</body>
+</html>
